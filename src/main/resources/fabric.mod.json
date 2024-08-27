@@ -8,8 +8,8 @@
 		"ErrorGamer2000"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/mod/pretty-hitboxes",
+		"sources": "https://github.com/nexensys/PrettyHitboxes"
 	},
 	"license": "MIT",
 	"icon": "assets/pretty-hitboxes/icon.png",
@@ -28,7 +28,6 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.14.21",
-		"minecraft": "~1.21",
-		"java": ">=17"
+		"minecraft": "~1.21"
 	}
 }
