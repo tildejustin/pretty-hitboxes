@@ -1,6 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.2-SNAPSHOT'
-    id "io.github.juuxel.loom-quiltflower" version "1.+"
+    id 'fabric-loom' version '1.7-SNAPSHOT'
     id "io.github.p03w.machete" version "1.1.4"
     id 'maven-publish'
 }
@@ -53,7 +52,6 @@ dependencies {
     modApi("me.shedaniel.cloth:cloth-config-fabric:${cloth_config_version}") {
         exclude(group: "net.fabricmc.fabric-api")
     }
-    implementation 'com.google.code.gson:gson:2.10.1'
 }
 
 processResources {
@@ -65,7 +63,7 @@ processResources {
 }
 
 tasks.withType(JavaCompile).configureEach {
-    it.options.release = 17
+    it.options.release = 21
 }
 
 java {
@@ -74,8 +72,8 @@ java {
     // If you remove this line, sources will not be generated.
     withSourcesJar()
 
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
 }
 
 jar {
