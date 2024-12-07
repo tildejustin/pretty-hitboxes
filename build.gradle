@@ -1,6 +1,6 @@
 plugins {
-    id 'fabric-loom' version '1.7-SNAPSHOT'
-    id "io.github.p03w.machete" version "1.1.4"
+    id 'fabric-loom' version '1.9-SNAPSHOT'
+    id "io.github.p03w.machete" version "2.0.1"
     id 'maven-publish'
 }
 

@@ -3,8 +3,7 @@ package com.errorgamer2000.mcplugins.prettyhitbox.mixin.client;
 import com.errorgamer2000.mcplugins.prettyhitbox.PrettyHitboxesConfig;
 import me.shedaniel.autoconfig.AutoConfig;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.render.VertexConsumer;
-import net.minecraft.client.render.WorldRenderer;
+import net.minecraft.client.render.*;
 import net.minecraft.client.render.entity.EntityRenderDispatcher;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.Entity;
@@ -62,7 +61,7 @@ public class EntityRenderDispatcherMixin {
                 PrettyHitboxesConfig.Color color = entity instanceof ItemEntity ? config.itemHitboxColor : bboxColor;
                 if (config.differentColorWhenTargeted && isTargeted(entity)) color = targetColor;
                 if (!(entity instanceof ItemEntity && !config.showItemHitboxes) && !(entity instanceof ThrownItemEntity && !config.showThrowableItemHitboxes) && !(entity instanceof BoatEntity && !config.showBoatHitboxes) && !((entity instanceof PaintingEntity && !config.showPaintingHitboxes) || (entity instanceof ItemFrameEntity && !config.showItemFrameHitboxes)))
-                    WorldRenderer.drawBox(matrices, vertices, box, clampedColorValue(color.red, false), clampedColorValue(color.green, false), clampedColorValue(color.blue, false), clampedColorValue(color.alpha, true));
+                    VertexRendering.drawBox(matrices, vertices, box, clampedColorValue(color.red, false), clampedColorValue(color.green, false), clampedColorValue(color.blue, false), clampedColorValue(color.alpha, true));
 
             } else if (!config.hideBigDragonBox) {
                 EnderDragonPart[] parts = ((EnderDragonEntity) entity).getBodyParts();
@@ -75,7 +74,7 @@ public class EntityRenderDispatcherMixin {
 
                 PrettyHitboxesConfig.Color color = bboxColor;
                 if (targeted) color = targetColor;
-                WorldRenderer.drawBox(matrices, vertices, box, clampedColorValue(color.red, false), clampedColorValue(color.green, false), clampedColorValue(color.blue, false), clampedColorValue(color.alpha, true));
+                VertexRendering.drawBox(matrices, vertices, box, clampedColorValue(color.red, false), clampedColorValue(color.green, false), clampedColorValue(color.blue, false), clampedColorValue(color.alpha, true));
             }
         }
 
@@ -96,7 +95,7 @@ public class EntityRenderDispatcherMixin {
                 double i = f + MathHelper.lerp((double) tickDelta, enderDragonPart.lastRenderZ, enderDragonPart.getZ());
                 matrices.translate(g, h, i);
                 if (config.showBoundingBox)
-                    WorldRenderer.drawBox(matrices, vertices, enderDragonPart.getBoundingBox().offset(-enderDragonPart.getX(), -enderDragonPart.getY(), -enderDragonPart.getZ()), clampedColorValue(color.red, false), clampedColorValue(color.green, false), clampedColorValue(color.blue, false), clampedColorValue(color.alpha, true));
+                    VertexRendering.drawBox(matrices, vertices, enderDragonPart.getBoundingBox().offset(-enderDragonPart.getX(), -enderDragonPart.getY(), -enderDragonPart.getZ()), clampedColorValue(color.red, false), clampedColorValue(color.green, false), clampedColorValue(color.blue, false), clampedColorValue(color.alpha, true));
                 matrices.pop();
             }
         }
@@ -104,7 +103,7 @@ public class EntityRenderDispatcherMixin {
         if (entity instanceof LivingEntity && config.showEyeHeight) {
             PrettyHitboxesConfig.Color eyeHeightColor = config.eyeHeightColor;
             float j = 0.01F;
-            WorldRenderer.drawBox(matrices, vertices, box.minX, (double) (entity.getStandingEyeHeight() - 0.01F), box.minZ, box.maxX, (double) (entity.getStandingEyeHeight() + 0.01F), box.maxZ, clampedColorValue(eyeHeightColor.red, false), clampedColorValue(eyeHeightColor.green, false), clampedColorValue(eyeHeightColor.blue, false), clampedColorValue(eyeHeightColor.alpha, true));
+            VertexRendering.drawBox(matrices, vertices, box.minX, (double) (entity.getStandingEyeHeight() - 0.01F), box.minZ, box.maxX, (double) (entity.getStandingEyeHeight() + 0.01F), box.maxZ, clampedColorValue(eyeHeightColor.red, false), clampedColorValue(eyeHeightColor.green, false), clampedColorValue(eyeHeightColor.blue, false), clampedColorValue(eyeHeightColor.alpha, true));
         }
 
         Vec3d vec3d = entity.getRotationVec(tickDelta);

@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "pretty-hitboxes",
-	"version": "1.2.0",
+	"version": "${version}",
 	"name": "Pretty Hitboxes",
 	"description": "Fully configurable hitbox rendering.",
 	"authors": [
@@ -28,6 +28,6 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.14.21",
-		"minecraft": "~1.21"
+		"minecraft": ">=1.21.2"
 	}
 }
