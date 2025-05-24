@@ -10,9 +10,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(MinecraftClient.class)
 public class PrettyHitboxesMixin {
-	@Inject(at = @At("HEAD"), method = "run")
-	private void run(CallbackInfo info) {
-		PrettyHitboxesConfig config = AutoConfig.getConfigHolder(PrettyHitboxesConfig.class).getConfig();
-		MinecraftClient.getInstance().getEntityRenderDispatcher().setRenderHitboxes(config.hitboxesEnabledByDefault);
-	}
+    @Inject(at = @At("HEAD"), method = "run")
+    private void run(CallbackInfo info) {
+        PrettyHitboxesConfig config = AutoConfig.getConfigHolder(PrettyHitboxesConfig.class).getConfig();
+        MinecraftClient.getInstance().getEntityRenderDispatcher().setRenderHitboxes(config.hitboxesEnabledByDefault);
+    }
 }

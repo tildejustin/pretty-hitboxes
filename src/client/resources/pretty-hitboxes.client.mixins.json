@@ -1,12 +1,16 @@
 {
-	"required": true,
-	"package": "com.errorgamer2000.mcplugins.prettyhitbox.mixin.client",
-	"compatibilityLevel": "JAVA_21",
-	"client": [
-		"PrettyHitboxesMixin",
-		"EntityRenderDispatcherMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	}
+  "required": true,
+  "package": "com.errorgamer2000.mcplugins.prettyhitbox.mixin.client",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "EnderDragonEntityRendererMixin",
+    "EntityHitboxMixin",
+    "EntityRenderDispatcherMixin",
+    "EntityRendererMixin",
+    "LivingEntityRendererMixin",
+    "PrettyHitboxesMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
 }

@@ -24,6 +24,8 @@
   "text.autoconfig.pretty-hitboxes.option.showBoatHitboxes.@Tooltip": "Shows or hides boat hitboxes",
   "text.autoconfig.pretty-hitboxes.option.showThrowableItemHitboxes": "Show Throwable Hitboxes",
   "text.autoconfig.pretty-hitboxes.option.showThrowableItemHitboxes.@Tooltip": "Shows or hides hitboxes for thrown items (pearls, eggs, snowballs)",
+  "text.autoconfig.pretty-hitboxes.option.showPassengerPos": "Show Passenger Position",
+  "text.autoconfig.pretty-hitboxes.option.showPassengerPos.@Tooltip": "Shows vehicle riding position box",
   "text.autoconfig.pretty-hitboxes.option.boundingBoxColor": "Bounding Box Color",
   "text.autoconfig.pretty-hitboxes.option.boundingBoxColor.red": "Red",
   "text.autoconfig.pretty-hitboxes.option.boundingBoxColor.red.@Tooltip": "Red value of the color's RGB value. Should be a number between 0 and 255, inclusive. Smaller or large values will be clamped.",
@@ -77,5 +79,14 @@
   "text.autoconfig.pretty-hitboxes.option.itemHitboxColor.blue": "Blue",
   "text.autoconfig.pretty-hitboxes.option.itemHitboxColor.blue.@Tooltip": "Blue value of the color's RGB value. Should be a number between 0 and 255, inclusive. Smaller or large values will be clamped.",
   "text.autoconfig.pretty-hitboxes.option.itemHitboxColor.alpha": "Alpha",
-  "text.autoconfig.pretty-hitboxes.option.itemHitboxColor.alpha.@Tooltip": "Alpha value of the color's RGB value. Should be a number between 0 and 100, inclusive. Smaller or large values will be clamped."
+  "text.autoconfig.pretty-hitboxes.option.itemHitboxColor.alpha.@Tooltip": "Alpha value of the color's RGB value. Should be a number between 0 and 100, inclusive. Smaller or large values will be clamped.",
+  "text.autoconfig.pretty-hitboxes.option.passengerPosColor": "Passenger Position Color",
+  "text.autoconfig.pretty-hitboxes.option.passengerPosColor.red": "Red",
+  "text.autoconfig.pretty-hitboxes.option.passengerPosColor.red.@Tooltip": "Red value of the color's RGB value. Should be a number between 0 and 255, inclusive. Smaller or large values will be clamped.",
+  "text.autoconfig.pretty-hitboxes.option.passengerPosColor.green": "Green",
+  "text.autoconfig.pretty-hitboxes.option.passengerPosColor.green.@Tooltip": "Green value of the color's RGB value. Should be a number between 0 and 255, inclusive. Smaller or large values will be clamped.",
+  "text.autoconfig.pretty-hitboxes.option.passengerPosColor.blue": "Blue",
+  "text.autoconfig.pretty-hitboxes.option.passengerPosColor.blue.@Tooltip": "Blue value of the color's RGB value. Should be a number between 0 and 255, inclusive. Smaller or large values will be clamped.",
+  "text.autoconfig.pretty-hitboxes.option.passengerPosColor.alpha": "Alpha",
+  "text.autoconfig.pretty-hitboxes.option.passengerPosColor.alpha.@Tooltip": "Alpha value of the color's RGB value. Should be a number between 0 and 100, inclusive. Smaller or large values will be clamped."
 }

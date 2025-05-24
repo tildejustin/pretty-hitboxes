@@ -24,6 +24,9 @@ public class PrettyHitboxesConfig implements ConfigData {
     public boolean showEntityRotationVector = true;
     @ConfigEntry.Category("Features")
     @ConfigEntry.Gui.Tooltip
+    public boolean showPassengerPos = true;
+    @ConfigEntry.Category("Features")
+    @ConfigEntry.Gui.Tooltip
     public boolean differentColorWhenTargeted = false;
     @ConfigEntry.Category("Features")
     @ConfigEntry.Gui.Tooltip
@@ -59,6 +62,9 @@ public class PrettyHitboxesConfig implements ConfigData {
     @ConfigEntry.Category("Colors")
     @ConfigEntry.Gui.CollapsibleObject
     public Color itemHitboxColor = new Color(255, 255, 255);
+    @ConfigEntry.Category("Colors")
+    @ConfigEntry.Gui.CollapsibleObject
+    public Color passengerPosColor = new Color(255, 255, 0);
 
 
     public static class Color {
